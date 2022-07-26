@@ -57,6 +57,7 @@ public abstract class BaseEnemy : PoolObject,IDamageable
         {
             damageable.TakeDamage(damage);
             SoundManager.Instance.PlayAtPoint(SoundType.ExplosionSound,transform.position);
+            ExplosionManager.Instance?.GenerateExplosionEffect(transform.position,Quaternion.identity);
             base.Destroy();
         }    
     }

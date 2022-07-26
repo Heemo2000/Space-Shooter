@@ -177,8 +177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 80
-  destroyTime: 3
+  destroyTime: 1.4
   damage: 20
+  boundaryMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!54 &5620204983072413549
 Rigidbody:
   m_ObjectHideFlags: 0

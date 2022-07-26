@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotatingSpeed: 120
+  movingSpeed: 60
+  destroyTime: 3
   healthFillAmount: 10
 --- !u!65 &8587607058890209059
 BoxCollider:

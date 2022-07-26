@@ -11,6 +11,7 @@ public class Bullet : PoolObject
     [SerializeField]private float destroyTime = 5f;
 
     [SerializeField]private float damage = 10f;
+    [SerializeField]private LayerMask boundaryMask;
     private Rigidbody _bulletRB;
     private float _currentTime; 
     private void Awake() {
@@ -38,13 +39,16 @@ public class Bullet : PoolObject
 
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.layer == gameObject.layer)
+        int collideLayerIndex = other.gameObject.layer;
+        int collideLayerValue =  1 << collideLayerIndex;
+        if(collideLayerValue == boundaryMask || collideLayerIndex == gameObject.layer)
         {
             return;
         }
 
         IDamageable damageable = other.GetComponent<IDamageable>();
         damageable?.TakeDamage(damage);
+        ExplosionManager.Instance.GenerateExplosionEffect(transform.position,Quaternion.identity);
         base.Destroy();
     }
 

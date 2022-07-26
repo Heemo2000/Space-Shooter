@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotatingSpeed: 0
-  movingSpeed: 20
+  movingSpeed: 60
   destroyTime: 3
   weaponPowerupData: {fileID: 11400000, guid: 095ac93946e04154097cee9aec5a7660, type: 2}
 --- !u!65 &2703193973822769584

@@ -68,16 +68,11 @@ public class Laser : BaseWeapon
         if(_laserIndicator.enabled)
         {
             _laserIndicator.SetPosition(0,firePoint.position);
-            float requiredLaserLength = maxLaserLength;
-            if(Physics.Raycast(firePoint.position,firePoint.right,out RaycastHit checkLengthHit,maxLaserLength,boundaryMask))
-            {
-                requiredLaserLength = Vector3.Distance(firePoint.position,checkLengthHit.point);
-            }
             _laserIndicator.SetPosition(1,firePoint.position + Vector3.right * maxLaserLength);
             
             
             SoundManager.Instance.PlayInstantly(SoundType.LaserSound,base.soundSource);
-            if(Physics.BoxCast(firePoint.position,Vector3.one,firePoint.right,out RaycastHit hit,transform.rotation,requiredLaserLength,damageMask))
+            if(Physics.BoxCast(firePoint.position,Vector3.one,firePoint.right,out RaycastHit hit,transform.rotation,maxLaserLength,damageMask))
             {
                 Debug.Log("Laser hits " + hit.transform.name);
                 IDamageable damageable = hit.transform.GetComponent<IDamageable>();

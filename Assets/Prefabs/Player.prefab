@@ -806,12 +806,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundSource: {fileID: 914529640}
-  laserLength: 150
+  maxLaserLength: 110
   firePoint: {fileID: 7641033403694372366}
-  showLaserDebug: 0
+  showLaserDebug: 1
   damageMask:
     serializedVersion: 2
     m_Bits: 256
+  boundaryMask:
+    serializedVersion: 2
+    m_Bits: 128
+  damage: 60
 --- !u!120 &7641033403748668241
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -994,7 +998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9ef9e37f21ef04dbe346e1b79db316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 4
   rotateAngle: 15
   rotationSpeed: 15
 --- !u!114 &7641033404439045564
@@ -1088,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cd69f8af5a19440970df6ae269be47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmount: 80
+  maxHealth: 40
 --- !u!114 &7641033404439045562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundSource: {fileID: 914529640}
-  fireInterval: 0.5
+  fireInterval: 0.1
   bulletData: {fileID: 11400000, guid: 5ea231c5054ba694ca7c255a9a9e89c5, type: 2}
   firePoints:
   - {fileID: 7641033403582066502}

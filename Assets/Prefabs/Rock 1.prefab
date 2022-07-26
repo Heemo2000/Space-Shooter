@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f351fc209a0769348b00ea7c54c9a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 60
+  moveSpeed: 100
   destroyTime: 10
   damage: 10
   powerup: {fileID: 8587607058890209061, guid: bac02e3b7e4020b49aee034ad5d8ed80, type: 3}

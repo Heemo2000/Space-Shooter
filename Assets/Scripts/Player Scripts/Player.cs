@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour,IDamageable
 {
-    [Range(5f,20f)]
+    [Range(1f,20f)]
     [SerializeField]private float moveSpeed = 10f;
 
     [Range(5f,30f)]

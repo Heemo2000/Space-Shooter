@@ -92,9 +92,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ce430d535961b45a2e1f89fce1c41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 80
-  destroyTime: 3
+  moveSpeed: 120
+  destroyTime: 1.4
   damage: 20
+  boundaryMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!54 &5620204983072413549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,7 +175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f2493731bdafe2846884db55fc548fde, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

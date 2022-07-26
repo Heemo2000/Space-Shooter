@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundSource: {fileID: 7878539945562281915}
-  fireInterval: 0.2
+  fireInterval: 0.1
   bulletData: {fileID: 11400000, guid: 213f66fcbd90f02408a326bff8aa9022, type: 2}
   firePoint: {fileID: 862061178}
 --- !u!1 &862061177

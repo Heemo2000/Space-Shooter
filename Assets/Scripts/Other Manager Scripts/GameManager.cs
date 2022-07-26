@@ -25,8 +25,6 @@ public class GameManager : GenericSingleton<GameManager>
     private void Start() 
     {
         OnGameOver.AddListener(MakeGameOver);
-        OnGamePaused.AddListener(PauseGame);
-        OnGameResumed.AddListener(UnPauseGame);
         InitializeLevel();        
     }
 
